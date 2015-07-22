@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title> Spectrum Search Bar & Datepicker - Development </title>
+        <link rel="stylesheet" href="css/sp-search-styles.css" />
+     </head>
+    <body> 
+        
+        <div id="sp-search-form-wrapper"> 
+            <form id="sp-form" > 
+                <input type="text" class="date start" placeholder="Arrival"> 
+                <input type="text" class="date end" placeholder="Departure"> 
+                <select> 
+                    <option> All Vacation Rentals </option>
+                    <option> Lakeside Cottages </option>
+                    <option> Gulf-front Condominiums </option>
+                </select>
+                <select> 
+                    <option> All Bedrooms </option>
+                    <option> 1 Bedroom </option>
+                    <option> 2 Bedroom </option>
+                    <option> 3 Bedroom </option>
+                    <option> 4 Bedroom </option>
+                    <option> 5 Bedroom </option>
+                </select>
+                <!--Containers for calendars--> 
+                <div id='cal1' class="calendar"> </div>
+                <div id='cal2' class="calendar"> </div>
+                <button type="submit"> Search </button>
+            </form>
+            <form id="sp-select"> 
+                <select> 
+                    <option> View Specific Rentals </option>
+                </select>
+                <button type="submit"> View Rental </button>
+            </form>
+        
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/sp-search-scripts.js"> </script>
+        <script> 
+            $(document).ready( function() {
+                 $('#cal1').spectrumDatePick({
+                    position: '.start', 
+                 }); 
+                 $('#cal2').spectrumDatePick({
+                    position: '.end', 
+                 }); 
+            });
+        </script>
+    </body>
+
+
+</html>
